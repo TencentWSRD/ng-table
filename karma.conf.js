@@ -30,7 +30,7 @@ module.exports = function (config) {
                 hash: false
             }
         },
-        reporters: ['progress', 'coverage'],
+        reporters: ['dots', 'spec', 'coverage'],
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,

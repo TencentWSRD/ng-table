@@ -25,6 +25,7 @@
     "karma-jasmine": "1.0.2",
     "karma-ng-html2js-preprocessor": "1.0.0",
     "karma-phantomjs-launcher": "1.0.1",
+    "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.8.0",
     "lodash": "~3.7.0",
     "ngtemplate-loader": "github:wearymonkey/ngtemplate-loader#63e3461d8b1298de913e3528766068260915ae1f",
