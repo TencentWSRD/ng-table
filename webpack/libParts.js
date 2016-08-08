@@ -188,8 +188,11 @@ function createLibraryParts(rootDir, env = {}) {
             module: {
                 postLoaders: [
                     {
-                        test: /^((?!Spec\.ts).)*.ts$/,
-                        exclude: /node_modules/,
+                        test: /\.ts$/,
+                        exclude: [
+                            /Spec\.ts$/,
+                            /node_modules/
+                        ],
                         loader: 'istanbul-instrumenter'
                     }
                 ]
