@@ -37,7 +37,8 @@
     "typings": "^1.2.0",
     "webpack": "^2.1.0-beta.20",
     "webpack-dev-server": "^2.1.0-beta.0",
-    "webpack-merge": "^0.14.1"
+    "webpack-merge": "^0.14.1",
+    "webpack-validator": "^2.2.7"
   },
   "scripts": {
     "build": "webpack --env.debug",
@@ -47,6 +48,7 @@
     "test": "karma start --single-run --no-auto-watch",
     "tsc": "tsc",
     "typings": "typings install",
+    "validate-webpack": "webpack-validator webpack.config.js --env.dev --env.test --env.prod",
     "watch:debug": "webpack --watch --env.debug",
     "watch": "webpack --watch",
     "webpack": "webpack"
