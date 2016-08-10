@@ -1,8 +1,14 @@
 // Karma configuration file
 // See http://karma-runner.github.io/0.10/config/configuration-file.html
-const testGlob = 'test/*.ts';
-const webpackConfig = require('./webpack.config')({ test: true })
+const testGlob = 'test/index.js';
+var debug = process.env.npm_lifecycle_event === 'test:debug'
+const webpackConfig = require('./webpack.config')({ test: true, noCoverage: debug });
+
 module.exports = function (config) {
+    let reporters = ['dots', 'spec'];
+    if (!debug) {
+        reporters.push('coverage');
+    }
     config.set({
         basePath: '',
 
@@ -30,11 +36,12 @@ module.exports = function (config) {
                 hash: false
             }
         },
-        reporters: ['dots', 'spec', 'coverage'],
+        reporters: reporters,
         colors: true,
         logLevel: config.LOG_INFO,
-        autoWatch: true,
-        browsers: ['PhantomJS'],
+        autoWatch: false,
+        singleRun: true,
+        browsers: [debug ? 'Chrome' : 'PhantomJS'],
         coverageReporter: {
             reporters: [
                 { type: 'lcov', dir: 'out/coverage' },

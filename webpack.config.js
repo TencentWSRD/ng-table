@@ -18,8 +18,7 @@ function createConfig(env, parts) {
 
     if (env.test) {
         return merge(
-            parts.asTestBundle(),
-            parts.testCoverage(),
+            env.noCoverage ? {} : parts.testCoverage(),
             common
         );
     } else {

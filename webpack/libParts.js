@@ -11,7 +11,6 @@ function createLibraryParts(rootDir, env = {}) {
     const libraryName = pkg.name;
 
     return {
-        asTestBundle,
         asUmdLibrary,
         banner,
         extractSass,
@@ -24,15 +23,6 @@ function createLibraryParts(rootDir, env = {}) {
 
     /////
 
-    function asTestBundle() {
-        return {
-            target: 'node',
-            output: {
-                filename: '[name].js',
-                path: path.join(rootDir, 'out', 'test')
-            }
-        }
-    }
 
     function asUmdLibrary() {
         const filename = env.prod ? `[name].min.js` : `[name].js`;
@@ -77,7 +67,7 @@ function createLibraryParts(rootDir, env = {}) {
     function extractSass(files) {
 
         // note:  The way we're setting up webpack here seems a bit of a hack:
-        // 
+        //
         // Although the setup creates two bundles seperating the js and css as desired,
         // it's also producing an extra styles.js file which we're throwing away/ignoring.
         // The alternative, more supported way of things, is to leave the css inline
@@ -134,7 +124,7 @@ function createLibraryParts(rootDir, env = {}) {
             };
         } else if (env.test) {
             return {
-                devtool: 'source-map-inline'
+                devtool: 'inline-source-map'
             };
         } else {
             return {
