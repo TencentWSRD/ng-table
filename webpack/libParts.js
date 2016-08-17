@@ -191,7 +191,7 @@ function createLibraryParts(rootDir, env = {}) {
     }
 
     function typescript() {
-        const tsconfigPath = path.resolve('..', rootDir, 'tsconfig.json')
+        const tsconfigPath = path.resolve('..', rootDir, 'tsconfig-webpack.json')
         return {
             // Currently we need to add '.ts' to the resolve.extensions array.
             resolve: {

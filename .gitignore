@@ -5,6 +5,7 @@ bower_components
 out
 typings
 npm-debug.*
+index.js
 test/*.js
 !test/index.js
 # redundant webpack build artifacts produced by ExtractTextPlugin
