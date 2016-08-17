@@ -10,7 +10,7 @@ import * as ng1 from 'angular';
 import { IColumnDef, IDynamicTableColDef } from './public-interfaces';
 
 interface IColumnBuilder {
-    buildColumn(column: IColumnDef | IDynamicTableColDef, defaultScope: ng1.IScope, columns: IColumnDef[]): IColumnDef
+    buildColumn(column: IColumnDef | IDynamicTableColDef, defaultScope: ng1.IScope, columns: Array<IColumnDef | IDynamicTableColDef>): IColumnDef | IDynamicTableColDef
 }
 
 /**
@@ -41,7 +41,7 @@ function ngTableColumn(): IColumnBuilder {
      * $column getter methods
      * @returns {Object} a $column object
      */
-    function buildColumn(column: IColumnDef | IDynamicTableColDef, defaultScope: ng1.IScope, columns: IColumnDef[]): IColumnDef{
+    function buildColumn(column: IColumnDef | IDynamicTableColDef, defaultScope: ng1.IScope, columns: IColumnDef[]): IColumnDef | IDynamicTableColDef {
         // note: we're not modifying the original column object. This helps to avoid unintended side affects
         var extendedCol = Object.create(column);
         var defaults = createDefaults();

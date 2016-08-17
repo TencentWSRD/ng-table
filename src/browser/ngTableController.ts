@@ -152,7 +152,7 @@ function ngTableController<T>(
             var result = $column.filterData($scope);
             if (!result) {
                 delete $column.filterData;
-                return;
+                return undefined;
             }
 
             if (isPromiseLike(result)) {
@@ -178,7 +178,7 @@ function ngTableController<T>(
     };
 
     this.buildColumns = function (columns: Array<IColumnDef | IDynamicTableColDef>) {
-        var result: IColumnDef[] = [];
+        var result: Array<IColumnDef | IDynamicTableColDef> = [];
         (columns || []).forEach(function (col) {
             result.push(ngTableColumn.buildColumn(col, $scope, result));
         });

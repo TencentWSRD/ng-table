@@ -44,7 +44,7 @@ function ngTableDynamic(){
                 }
             });
             if (!row) {
-                return;
+                return undefined;
             }
 
             ng1.forEach(row.find('td'), function(item) {
