@@ -11,7 +11,7 @@ import { DataResult, IGroupingFunc, Grouping } from '../core';
 import { IColumnDef } from './public-interfaces';
 import { ITableScope } from './ngTableController';
 
-interface IScopeExtensions<T> {
+export interface IScopeExtensions<T> {
     $selGroup: IGroupingFunc<any> | string;
     $selGroupTitle: string;
     getGroupables(): Array<IGroupingFunc<any> | IColumnDef>

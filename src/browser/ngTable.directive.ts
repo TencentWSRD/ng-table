@@ -24,7 +24,7 @@ interface IScopeExtensions {
  */
 ngTable.$inject = ['$q', '$parse'];
 
-function ngTable($q: ng1.IQService, $parse: ng1.IParseService) {
+function ngTable($q: ng1.IQService, $parse: ng1.IParseService) : ng1.IDirective {
 
     return {
         restrict: 'A',

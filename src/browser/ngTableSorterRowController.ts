@@ -10,11 +10,11 @@ import { ISortingValues } from '../core';
 import { IColumnDef } from './public-interfaces';
 import { ITableScope } from './ngTableController';
 
-interface IScopeExtensions {
+export interface IScopeExtensions {
     sortBy($column: IColumnDef, event: IAugmentedMouseEvent): void;
 }
 
-interface IAugmentedMouseEvent extends ng1.IAngularEvent {
+export interface IAugmentedMouseEvent extends ng1.IAngularEvent {
     ctrlKey: boolean;
     metaKey: boolean;
 }

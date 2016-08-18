@@ -33,7 +33,7 @@ interface IScopeExtensions {
  */
 ngTableSelectFilterDs.$inject = [];
 
-function ngTableSelectFilterDs(){
+function ngTableSelectFilterDs(): ng1.IDirective{
     // note: not using isolated or child scope "by design"
     // this is to allow this directive to be combined with other directives that do
 

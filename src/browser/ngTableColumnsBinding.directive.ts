@@ -24,7 +24,7 @@ ngTableColumnsBinding.$inject = ["$parse"];
  *
  * This allows the $columns array to be accessed outside of the html table markup
  */
-function ngTableColumnsBinding<T>($parse: ng1.IParseService){
+function ngTableColumnsBinding<T>($parse: ng1.IParseService) : ng1.IDirective {
     var directive = {
         restrict: 'A',
         require: 'ngTable',

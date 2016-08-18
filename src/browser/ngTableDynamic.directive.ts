@@ -26,7 +26,7 @@ interface IScopeExtensions {
  */
 ngTableDynamic.$inject = [];
 
-function ngTableDynamic(){
+function ngTableDynamic () : ng1.IDirective{
 
     return {
         restrict: 'A',

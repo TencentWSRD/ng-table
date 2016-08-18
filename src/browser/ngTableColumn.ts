@@ -9,7 +9,7 @@
 import * as ng1 from 'angular';
 import { IColumnDef, IDynamicTableColDef } from './public-interfaces';
 
-interface IColumnBuilder {
+export interface IColumnBuilder {
     buildColumn(column: IColumnDef | IDynamicTableColDef, defaultScope: ng1.IScope, columns: Array<IColumnDef | IDynamicTableColDef>): IColumnDef | IDynamicTableColDef
 }
 
@@ -127,4 +127,4 @@ function ngTableColumn(): IColumnBuilder {
     }
 }
 
-export { ngTableColumn, IColumnBuilder };
+export { ngTableColumn };

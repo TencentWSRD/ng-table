@@ -11,10 +11,10 @@ import { DataResult, IDataRowGroup, INgTableParams, IEventsChannel, IPageButton,
 import { IColumnDef, IDynamicTableColDef, SelectData } from './public-interfaces';
 import { IColumnBuilder } from './ngTableColumn';
 
-type DataResults<T> = T[] & { visibleColumnCount: number };
-type GroupedDataResults<T> = IDataRowGroup<T>[] & { visibleColumnCount: number };
+export type DataResults<T> = T[] & { visibleColumnCount: number };
+export type GroupedDataResults<T> = IDataRowGroup<T>[] & { visibleColumnCount: number };
 
-interface ITableScope<T> extends ng1.IScope {
+export interface ITableScope<T> extends ng1.IScope {
     $columns: IColumnDef[];
     $loading: boolean;
     $filterRow: {
@@ -34,7 +34,7 @@ interface ITableScope<T> extends ng1.IScope {
     params: INgTableParams<T>
 }
 
-interface ITableInputAttributes extends ng1.IAttributes {
+export interface ITableInputAttributes extends ng1.IAttributes {
     disableFilter?: string;
     ngTable?: string;
     ngTableDynamic?: string;
@@ -307,4 +307,4 @@ function ngTableController<T>(
     commonInit();
 }
 
-export { ngTableController, ITableInputAttributes, ITableScope };
+export { ngTableController };

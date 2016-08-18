@@ -22,7 +22,7 @@ interface IScopeExtensions {
  */
 ngTablePagination.$inject = ['$compile', '$document', 'ngTableEventsChannel'];
 
-function ngTablePagination<T>($compile: ng1.ICompileService, $document: ng1.IDocumentService, ngTableEventsChannel: IEventsChannel) {
+function ngTablePagination<T>($compile: ng1.ICompileService, $document: ng1.IDocumentService, ngTableEventsChannel: IEventsChannel): ng1.IDirective {
 
     return {
         restrict: 'A',
