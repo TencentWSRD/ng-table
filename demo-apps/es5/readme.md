@@ -1,8 +1,8 @@
-# ngTable Demo App
+# ngTable ES5 Demo App
 
 ## Overview
 
-* Adds `ng-table` to the page using a global script tag
+* Loads `ng-table` on to the page using a global script tag
 * Application code written in ECMAScript 5
 
 ## Running sample App
