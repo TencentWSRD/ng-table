@@ -1,9 +1,9 @@
 {
-  "name": "ng-table-demo-app-es5",
-  "version": "0.0.0",
+  "name": "ng-table-demo-app-es6-systemjs",
+  "version": "1.0.0",
   "author": "Vitalii Savchuk <esvit666@gmail.com>",
   "license": "BSD",
-  "description": "",
+  "description": "ng-table example app; app written in es2015; systemjs to load scripts",
   "private": true,
   "scripts": {
     "_linklocal": "node ../../node_modules/linklocal/bin/linklocal.js",
@@ -20,7 +20,7 @@
     "angular": "1.5.8",
     "bootstrap": "3.3.7",
     "ng-table": "^1.0.0",
-    "systemjs": "^0.19.36",
+    "systemjs": "0.19.36",
     "systemjs-plugin-babel": "0.0.13"
   }
 }
