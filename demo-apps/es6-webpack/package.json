@@ -1,0 +1,23 @@
+{
+  "name": "ng-table-demo-app-es6-systemjs",
+  "version": "1.0.0",
+  "author": "Vitalii Savchuk <esvit666@gmail.com>",
+  "license": "BSD",
+  "description": "ng-table example app; app written in es2015; systemjs to load scripts",
+  "private": true,
+  "scripts": {
+    "_linklocal": "node ../../node_modules/linklocal/bin/linklocal.js",
+    "build:lib": "cd ../../ && npm run tsc",
+    "linklocal": "npm run _linklocal -- --named ng-table ../../../",
+    "setup:local": "node ../../node_modules/npm-run-all/bin/npm-run-all --parallel build:lib linklocal",
+    "start": "node ../../node_modules/npm-run-all/bin/npm-run-all --parallel watch:lib server",
+    "unlinklocal": "npm run _linklocal -- unlink --named ng-table ../../../ && npm install --production",
+    "watch:lib": "cd ../../ && npm run tsc:w"
+  },
+  "keywords": [],
+  "dependencies": {
+    "angular": "1.5.8",
+    "bootstrap": "3.3.7",
+    "ng-table": "^1.0.0"
+  }
+}

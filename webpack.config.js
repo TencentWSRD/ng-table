@@ -13,7 +13,7 @@ function createConfig(env, parts) {
         parts.excludeAngular(),
         parts.inlineHtmlTemplates(),
         parts.forEnvironment(),
-        parts.typescript()
+        parts.typescript('tsconfig-webpack.json')
     );
 
     if (env.test) {

@@ -2,7 +2,7 @@
 
 ## Overview
 
-* Loads `ng-table` on to the page using SystemJS
+* Loads `ng-table` on to the page using webpack
 * Application code written in ES2015
 
 ## Running sample App
@@ -10,8 +10,8 @@
 1. cd demo-apps/es5
 2. `npm install`
 3. `npm run setup:local`
-    * runs the ng-table build to create the library distibutable code (including `ng-table.js`)
+    * runs typescript compiler for ng-table
     * in this app's node_modules, creates a symlink reference to your local ng-table on disk
 4. `npm start`
-    * runs the ng-table build in watch mode
-    * opens this app's index.html
+    * runs typescript compiler for ng-table in watch mode
+    * runs webpack-dev-server to serve this app's index.html
