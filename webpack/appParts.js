@@ -18,6 +18,7 @@ function createAppParts(rootDir, env = {}) {
         asAppBundle,
         extractSassChunks,
         inlineImages,
+        inlineHtmlTemplates,
         useHtmlPlugin
     });
 
@@ -66,7 +67,7 @@ function createAppParts(rootDir, env = {}) {
                         // ensure urls in css work in conjunction with source maps
                         // this is required because of the limitation of style-loader
                         // (see https://github.com/webpack/style-loader#recommended-configuration)
-                        publicPath: 'http://localhost:8080/'
+                        publicPath: 'http://localhost:8080'
                     }
                 }//,
                 // hot module reload not working; wanted it for the css :-(
@@ -178,5 +179,19 @@ function createAppParts(rootDir, env = {}) {
                 ]
             }
         }
+    }
+
+    function inlineHtmlTemplates() {
+        return {
+            module: {
+                loaders: [
+                    {
+                        test: /\.html$/,
+                        loaders: ['ngtemplate?requireAngular&prefix=demo-app/', 'html'],
+                        exclude: path.join(rootDir, 'index.tpl.html')
+                    }
+                ]
+            }
+        };
     }
 }

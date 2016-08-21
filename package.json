@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git://github.com/esvit/ng-table.git"
   },
-  "main": "dist/ng-table.js",
+  "main": "index.js",
   "devDependencies": {
     "angular": "^1.5.8",
     "awesome-typescript-loader": "^2.1.1",

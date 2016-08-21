@@ -3,7 +3,7 @@ const merge = require('webpack-merge');
 
 module.exports = (env = { prod: false, debug: false, port: 8080, host: 'localhost' }) => {
 
-    const parts = require('../webpack/appParts')(__dirname, env);
+    const parts = require('../../webpack/appParts')(__dirname, env);
 
     return merge(
         parts.asAppBundle(),
@@ -14,6 +14,7 @@ module.exports = (env = { prod: false, debug: false, port: 8080, host: 'localhos
         //     ]
         // }),
         // parts.inlineImages(),
+        parts.inlineHtmlTemplates(),
         parts.useHtmlPlugin(),
         parts.forEnvironment()
     );
