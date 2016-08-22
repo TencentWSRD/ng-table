@@ -3,8 +3,5 @@
 node_modules
 bower_components
 out
-typings
 npm-debug.log
-test/*.js
-# redundant webpack build artifacts produced by ExtractTextPlugin
-dist/styles.*
+.DS_Store
